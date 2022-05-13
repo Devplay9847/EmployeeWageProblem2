@@ -10,8 +10,29 @@ namespace EmployeeWage2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("WELCOME TO EMPLOYEE WAGE PROBLEM PART 2");
+            int Parttime = 1;
+            int Fulltime = 2;
+            int EmpRatePERHR = 20;
+            int Emphr = 0;
+            int Empwage = 0;
+            Random random = new Random();
+            int RandomCheck = random.Next(0, 2);
+            switch (RandomCheck)
+            {
+                case 1:
+                    Emphr = 4;
+                    break;
+                    case 2:
+                    Emphr = 8;
+                    break;
+                    default:
+                    Emphr = 0;
+                    break;
+            }
+            Empwage = Emphr * EmpRatePERHR;
+            Console.WriteLine("EMP wage :" + Empwage);
             Console.ReadLine();
         }
     }
 }
+   
